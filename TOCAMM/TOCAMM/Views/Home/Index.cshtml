@@ -1,0 +1,25 @@
+﻿@model TOCAMM.Models.Usuario
+
+@{
+    Layout = null;
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Bienvenido</h1>
+        <h3>Username : @Session["userName"].ToString()</h3>
+        <a href="@Url.Action("LogOut","Login")">Cerrar sesión</a>
+    </div>
+</body>
+</html>

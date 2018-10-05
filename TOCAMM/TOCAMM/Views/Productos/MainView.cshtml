@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Main View";
+    var ListaProductos = ViewBag.ListaProductos;
+}
+
+<h1>Vista Principal</h1>
+<hr />
+<p>
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>
+
+<div class="container">
+
+    <div class="row">
+
+        @foreach (var p in ListaProductos)
+        {
+
+            <div class="col-lg-4">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading text-center">@p.Nombre</div>
+
+                    <div class="panel-body">
+
+                        <img class="img-responsive" style="width:1000px; height:400px;" src="@p.Imagen" />
+
+                        <p class="text-center">@p.Descripcion</p>
+
+                        <hr />
+
+                        <p class="text-center">$ @p.Precio</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        }
+
+    </div>
+
+</div>
+
+
+
+
+
+

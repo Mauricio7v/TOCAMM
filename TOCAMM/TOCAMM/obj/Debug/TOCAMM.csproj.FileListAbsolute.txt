@@ -1,0 +1,4 @@
+C:\Users\mauri\Source\Repos\TOCAMM\TOCAMM\TOCAMM\obj\Debug\TOCAMM.csprojAssemblyReference.cache
+C:\Users\mauri\Source\Repos\TOCAMM\TOCAMM\TOCAMM\obj\Debug\TOCAMM.csproj.CoreCompileInputs.cache
+C:\Users\mauri\Source\Repos\TOCAMM\TOCAMM\TOCAMM\obj\Debug\TOCAMM.dll
+C:\Users\mauri\Source\Repos\TOCAMM\TOCAMM\TOCAMM\obj\Debug\TOCAMM.pdb

@@ -1,0 +1,56 @@
+﻿@model TOCAMM.Models.Productos
+@{
+    ViewBag.Title = "Crear | Producto";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+
+    @*<div class="form-row center text-center">*@
+
+    <h2>Agrega un Productos</h2>
+
+    <hr />
+
+    <form action="@Url.Action("Agregar")" method="post">
+
+        <div>
+
+            <section>
+                <input type="text" name="Nombre" placeholder="Escribe el nombre del producto." class="form-control" />
+                <br />
+                <input type="text" name="Descripcion" placeholder="Escribe la descripcion del producto." class="form-control" />
+                <br />
+                <input type="text" name="Imagen" placeholder="Escribe la Url de la imagen." class="form-control" />
+                <br />
+                <input type="text" name="Precio" placeholder="Escribe el precio." class="form-control" />
+                <br />
+                <input class="btn btn-default" type="submit" value="Agregar" />
+
+            </section>
+
+        </div>
+
+    </form>
+
+    <br />
+
+    <div>
+        @Html.ActionLink("Volver a la lista", "Index")
+    </div>
+
+
+    @*</div>*@
+
+}
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
