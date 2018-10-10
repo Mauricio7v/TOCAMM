@@ -51,7 +51,7 @@ $('document').ready(function()
 					validname: "Name must contain only alphabets and space",
 					minlength: "Your Name is Too Short"
                },
-               Nombre: {
+               nombreus: {
                    required: "Please Enter User Name",
                    minlength: "Your Name is Too Short"
                },

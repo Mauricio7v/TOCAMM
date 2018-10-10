@@ -11,13 +11,28 @@ namespace TOCAMM.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Usuario
     {
         public int usuarioId { get; set; }
+
+        
+        [Required(ErrorMessage = ("Campo obligatorio"))]
         public string Nombre { get; set; }
+
+        [EmailAddress(ErrorMessage = ("Introduzca un correo válido"))]
+        [Required(ErrorMessage = ("Por favor, introduzca la dirección de correo electrónico"))]
         public string CorreoElectronico { get; set; }
+
+        [Required(ErrorMessage = ("Por favor introduzca un usuario"))]
         public string nombreus { get; set; }
+
+        [Required(ErrorMessage = ("Por favor introduzca una contraseña"))]
         public string pass { get; set; }
+
+        [Compare("pass", ErrorMessage = ("Las contraseñas no coinciden"))]
+        public string cpass { get; set; }
+        public string LoginErrorMessage { get; internal set; }
     }
 }

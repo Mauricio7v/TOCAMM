@@ -131,8 +131,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\Productos\Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Controllers\Productos\Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -196,6 +196,11 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -206,9 +211,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\Productos\DBCommon.cs" />
-    <Compile Include="Controllers\Productos\Models\C__MigrationHistory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\Productos\Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,12 +226,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Productos\Models\Usuario.cs">
+    <Compile Include="Controllers\Productos\Models\Productos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Productos\Models\Usuarios.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\Productos\Models\sysdiagrams.cs" />
     <Compile Include="Controllers\Productos\ProductosBL.cs" />
     <Compile Include="Controllers\Productos\ProductosController.cs" />
     <Compile Include="Controllers\Productos\ProductosDAL.cs" />
@@ -288,6 +288,11 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\SignUp\Create.cshtml" />
+    <Content Include="Views\SignUp\Delete.cshtml" />
+    <Content Include="Views\SignUp\Details.cshtml" />
+    <Content Include="Views\SignUp\Edit.cshtml" />
+    <Content Include="Views\SignUp\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

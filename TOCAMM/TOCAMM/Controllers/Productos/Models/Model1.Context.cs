@@ -13,10 +13,10 @@ namespace TOCAMM.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LoginEntities : DbContext
+    public partial class proyecto1Entities : DbContext
     {
-        public LoginEntities()
-            : base("name=LoginEntities")
+        public proyecto1Entities()
+            : base("name=proyecto1Entities")
         {
         }
     
@@ -25,8 +25,6 @@ namespace TOCAMM.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Productos> Productos { get; set; }
     }
 }

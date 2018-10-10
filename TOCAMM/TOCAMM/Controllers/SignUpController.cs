@@ -12,7 +12,7 @@ namespace TOCAMM.Controllers
 {
     public class SignUpController : Controller
     {
-        private LoginEntities db = new LoginEntities();
+        private LoginEntities1 db = new LoginEntities1();
 
         // GET: SignUp
         public ActionResult Index()
@@ -52,7 +52,7 @@ namespace TOCAMM.Controllers
             {
                 db.Usuario.Add(usuario);
                 db.SaveChanges();
-                return RedirectToAction("/Index","Login");
+                return RedirectToAction("/Index", "Login");
             }
 
             return View(usuario);

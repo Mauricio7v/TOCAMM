@@ -1,0 +1,141 @@
+﻿@model TOCAMM.Models.Usuario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>prueba</title>
+        <link href="~/Login/Bootstrap/Css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Login/Assets/signup-form.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container" style="position:relative; top:25%; align-items:center;">
+
+            <div class="signup-form-container">
+
+                <!-- form start -->
+                <form method="post" role="form" id="register-form" autocomplete="off" action="submit">
+
+                    <div class="form-header">
+                        <h3 class="form-title"><i class="fa fa-user"></i>Regístrate</h3>
+
+                        <div class="pull-right">
+                            <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="form-body">
+
+                        <div class="alert alert-info" id="message" style="display:none;">
+                            submitted
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                <input name="Nombre" type="text" class="form-control" placeholder="Nombre.">
+                                @Html.ValidationMessageFor(model => model.Nombre)
+                            </div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                <input name="CorreoElectronico" type="text" class="form-control" placeholder="Correo electrónico.">
+                                @Html.ValidationMessageFor(model => model.CorreoElectronico)
+                            </div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                <input name="nombreus" type="text" class="form-control" placeholder="Usuario">
+                                @Html.ValidationMessageFor(model => model.nombreus)
+                            </div>
+                            <span class="help-block" id="error"></span>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-lg-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                    <input name="pass" id="password" type="password" class="form-control" placeholder="Contraseña.">
+                                    @Html.ValidationMessageFor(model => model.pass)
+                                </div>
+                                <span class="help-block" id="error"></span>
+
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                    <input name="cpass" type="password" class="form-control" placeholder="Reescribala">
+                                    @Html.ValidationMessageFor(model => model.cpass)
+                                </div>
+                                <span class="help-block" id="error"></span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        @*<div class="form-group col-lg-6">
+                                <div class="form-footer">
+                                    <button type="submit" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-log-in"></span> Regístrate !
+                                    </button>
+                                </div>
+                            </div>*@
+                        <div class="form-group">
+                            <div class="form-group col-lg-6">
+                                <button type="submit" class="btn btn-info-lg btn-primary"> <span class="glyphicon glyphicon-log-in"></span> Regístrate !</button>
+                                <button type="reset" class="btn btn-info-lg">Cancelar</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <script src="~/Login/Bootstrap/Js/bootstrap.min.js"></script>
+        <script src="~/Login/Assets/jquery-1.11.2.min.js"></script>
+        <script src="~/Login/Assets/jquery.validate.min.js"></script>
+        <script src="~/Login/Assets/register.js"></script>
+
+        <script src="~/scripts/jquery.validate.js"></script>
+        <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+        @*<script src="~/scripts/jquery.validate.min.js"></script>*@
+        <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    </body>
+</html>
+
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+
+

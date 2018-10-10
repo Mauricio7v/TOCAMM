@@ -17,7 +17,7 @@ namespace TOCAMM.Controllers
         [HttpPost]
         public ActionResult Authorize(TOCAMM.Models.Usuario userModel)
         {
-            using (LoginEntities db = new LoginEntities())
+            using (LoginEntities1 db = new LoginEntities1())
             {
                 var userDetails = db.Usuario.Where(x => x.nombreus == userModel.nombreus && x.pass == userModel.pass).FirstOrDefault();
                 if (userDetails == null)
