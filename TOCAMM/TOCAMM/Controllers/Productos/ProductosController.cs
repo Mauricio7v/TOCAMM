@@ -120,6 +120,11 @@ namespace TOCAMM.Models
             ViewBag.ListaProductos = b.ConsultarProductos().ToList();
             return View();
         }
+        public ActionResult MainView2()
+        {
+            ViewBag.ListaProductos = b.ConsultarProductos().ToList();
+            return View();
+        }
         public ActionResult SearchFilter(string Nombre)
         {
             var resultado = from s in db.Productos select s;
